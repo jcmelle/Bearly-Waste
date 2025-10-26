@@ -117,6 +117,7 @@ export default function Recycle({ onAddXP }) {
           📸 Open Live Camera
         </button>
 
+        {/* Camera Mode */}
         {mode === "camera" && (
           <div className="flex flex-col items-center">
             <Webcam
@@ -136,41 +137,26 @@ export default function Recycle({ onAddXP }) {
           </div>
         )}
 
+        {/* Uploaded Image Preview */}
         {imagePreview && (
           <img
             src={imagePreview}
             alt="preview"
             className="w-48 h-48 object-cover rounded-xl border border-emerald-300 mt-4"
           />
-          <button
-            onClick={handleCapture}
-            className="px-5 py-2 bg-emerald-600 text-white rounded-xl shadow hover:bg-emerald-700"
-          >
-            Capture Photo
-          </button>
-        </div>
-      )}
+        )}
 
-      {/* Uploaded Image Preview */}
-      {imagePreview && (
-        <img
-          src={imagePreview}
-          alt="preview"
-          className="w-48 h-48 object-cover rounded-xl border border-emerald-300 mt-4"
-        />
-      )}
+        {/* Results + Map */}
+        {loading && <p className="text-gray-600 mt-3">Analyzing image... ⏳</p>}
+        {result && <p className="mt-3 text-lg">{result}</p>}
 
-      {/* Results + Map */}
-      {loading && <p className="text-gray-600 mt-3">Analyzing image... ⏳</p>}
-      {result && <p className="mt-3 text-lg">{result}</p>}
-
-      {/* Google Map only shows if recyclable item detected */}
-      {result.includes("Recyclable") && (
-  <div className="w-full min-h-[400px] flex justify-center">
-    <RecycleMap />
-  </div>
-)}
+        {/* Google Map only shows if recyclable item detected */}
+        {result.includes("Recyclable") && (
+          <div className="w-full min-h-[400px] flex justify-center">
+            <RecycleMap />
+          </div>
+        )}
+      </div>
     </div>
   );
 }
-
