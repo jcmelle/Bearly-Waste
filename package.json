@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@googlemaps/markerclusterer": "^2.6.2",
     "@tensorflow-models/mobilenet": "^2.1.1",
     "@tensorflow/tfjs": "^4.22.0",
     "@vis.gl/react-google-maps": "^1.6.1",
