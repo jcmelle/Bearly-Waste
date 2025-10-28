@@ -1,6 +1,6 @@
 Bearly Waste: Snap it, Sort it, Save the planet.
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=lFS6KhOjxyg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/embed/lFS6KhOjxyg?si=gqRf-jQD3wjP397i
 
 ## Inspriration
 Bearly Waste was inspired by the thought of helping people become more environmentally conscious. We realized that many people are unsure of how to properly recycle, so what if we gamified that process?
