@@ -1,16 +1,24 @@
-# React + Vite
+Bearly Waste: Snap it, Sort it, Save the planet.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=lFS6KhOjxyg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Currently, two official plugins are available:
+## Inspriration
+Bearly Waste was inspired by the thought of helping people become more environmentally conscious. We realized that many people are unsure of how to properly recycle, so what if we gamified that process?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What it does
+A web app designed to assist in classifying whether an object is recyclable, compostable, or just trash. Either upload a photo, or take one with the live camera, and the AI will classify it for you. If the object happens to be recyclable, it will display a map with the recycling centers closest to your current location, otherwise it will tell you how to better use or simply discard the object. As you continue to find more recyclable and compostable items, you earn EXP that you can spend on treats to feed our mascot, Binnie, and make him happy.
 
-## React Compiler
+## How we built it
+We built Bearly Waste using react.js and TailWind CSS for the frontend to create a clean, responsive interface. For the AI classification, we used TensorFlow.js with the MobileNet model to detect recyclables directly in the browser. We integrated Google Maps API to display nearby recycling centers whenever the AI detects a recyclable item. Binnie’s pet logic and XP system were built with React Hooks for real-time updates, allowing players to spend their XP and affect his happiness levels instantly.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Challenges we ran into
+Experienced some issues with integrating the Google Maps API, mostly with how to tie in the API key. We also had to fix any silent interactions the map would have with the UI (a lack of a specific height would lead to the map rendering but turning invisible). We also experienced some issues with integrating our initial mascot, an 8-bit animated image that had more animations and interactions to keep track of.
 
-## Expanding the ESLint configuration
+## Accomplishments that we're proud of
+We successfully connected machine learning, interactive maps, and game mechanics into one seamless web experience. We created an app that not only teaches recycling but encourages real-world action. We also designed a system where users can directly see the impact of their actions through Binnie’s emotions.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## What we learned
+We learned how to integrate TensorFlow.js into a react web app to perform real-time image classification. We gained experience working with the Google Maps API to dynamically display nearby recycling centers. Most importantly, we learned how gamification can inspire users to adopt eco-friendly behaviors and how small design details, like Binnie’s mood, can make a big difference in user engagement.
+
+## What's next for Bearly Waste
+Upgrade the map to show more locations that we do not have to hard code in as POIs, also add a function to allow the user to actually navigate to the recycling center of their choice rather than simply viewing their distance from one. Also find a way to better integrate our initial mascot idea with smoother animations and more interactions.
